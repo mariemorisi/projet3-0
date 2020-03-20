@@ -42,6 +42,7 @@ require("include/header.php");
                     echo  '<h3>' . $result['countpost'] . ' commentaires </h3>';
                 }
                 ?>
+                
                 <!--Ajouter un commentaire -->
                 <div class="vote_boutons">
                     <a href="commentaire_post.php?id=<?= $_GET['id']?>"> <input type="button" class="bouton_comm" value="Ajoutez un commentaire"> </a> 
