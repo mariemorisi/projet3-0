@@ -8,9 +8,9 @@ require("include/connecbdd.php");
 
     if (!empty($_POST['username']) AND !empty($_POST['password'])) 
     {
-    // Comparaison du password envoyé via le formulaire avec la base
-    $isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
-    
+        // Comparaison du password envoyé via le formulaire avec la base
+        $isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
+        
         if (!$isPasswordCorrect) 
         {
             header('Location: page_connexion.php?err=password');
