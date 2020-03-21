@@ -3,7 +3,6 @@ body
 {
     color: #181818;
     margin: auto;
-    border-width: 100%;
     font-family: Helvetica,Arial,sans-serif;
 
 }
@@ -19,7 +18,6 @@ header
 h1
 {
     font-size: 3rem;
-    font-weight: 550;
     text-align: center;
 
 }
@@ -46,7 +44,7 @@ footer
     padding-bottom: 2px;
 }
 
-#login, #inscription, #form_commentaire
+#login, #inscription, #form_commentaire, .bloc_mentions
 {
 	margin: 100px;
     max-width: 100%; 
@@ -123,7 +121,6 @@ h3
 .logo_acteur_mini
 {
     max-width: 150px;
-    max-height: auto;
     margin-bottom: 20px;
 }
 .bloc_description
@@ -160,7 +157,6 @@ padding: 20px;
 text-align: center;
 border-radius: 10px;
 font-size: 1.2rem;
-font-weight: 250;
 }
 
 #separateur
@@ -230,7 +226,7 @@ font-weight: 250;
     max-width: 80%;
     transition: transform 400ms; 
     margin-top: 20px;
-    border: rgb(252, 116, 106);
+    border: none;
     background-color: rgb(252, 116, 106);
     outline: none;
     float: right;
@@ -432,7 +428,6 @@ textarea:focus
     .logo_acteur_mini 
     {
         max-width: 80%;
-        max-height: auto;
         padding-left: 8%;
         margin-bottom: 20px;
     }
