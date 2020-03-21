@@ -21,15 +21,16 @@ require("include/connecbdd.php")
                 </div>
             </a>
             <div id="nomsession">
-                <div class="nomprenom">
-                <?php 
-                if(!empty($_SESSION['id_users']) AND !empty($_SESSION['pseudo']) AND !empty($_SESSION['nom']) AND !empty($_SESSION['prenom'])) 
-                    {
-                    echo '<img class="iconlog" src="acteurs-partenaires/iconlog.png" alt="iconelog"/> ' . $_SESSION['nom'] .' '. $_SESSION['prenom'] ;
-                    ?>
-                </div>    
-                <p><a href="parametres.php"><input type="button" class="bouton_parametre" value= "Parametres du compte"></a> </p>
-                <p><a href="page_deconnexion.php"> <input type="button" class="bouton_deconnexion" value= "Déconnexion"></a></p> 
+                <button class="bouton_nom">
+                    <?php 
+                    if(!empty($_SESSION['id_users']) AND !empty($_SESSION['pseudo']) AND !empty($_SESSION['nom']) AND !empty($_SESSION['prenom'])) 
+                        {
+                        echo '<img class="iconlog" src="acteurs-partenaires/iconlog.png" alt="iconelog"/> ' . $_SESSION['nom'] .' '. $_SESSION['prenom'] ;
+                        ?>
+                    </button>    
+               
+                <button class="bouton_parametre" onclick= "window.location.href = 'parametres.php';"> Parametres du compte </button> 
+                <button class="bouton_deconnexion" onclick= "window.location.href = 'page_deconnexion.php';"> Déconnexion </button> 
                 <?php
                 }
                 else 

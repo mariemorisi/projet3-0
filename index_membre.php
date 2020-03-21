@@ -16,7 +16,7 @@ require_once("include/header.php");
 	</div>
 </div>
 <!-- On affiche les acteurs -->
-<div id="separateur"></div>
+<div class="separateur"></div>
 <div id="bloc_acteur">
 	<div id="bloc_titre">
 		<h2> Acteurs et Partenaires </h2>
@@ -30,13 +30,11 @@ require_once("include/header.php");
 		{
 		?>	
 		<div class="styleacteur">
-			<img class="logo_acteur_mini" src="<?php echo $donnees['logo']; ?>"/> <br/>
+			<img class="logo_acteur_mini" src="<?php echo $donnees['logo']; ?>" alt="acteur_logo_mini"/> <br/>
 			<div class="texteacteur">
 				<?php echo '<h2>' . $donnees['acteurs'] . '</h2>';
 				 echo substr($donnees['description'], 0, 100).'...'; ?>
-				<a href="acteur.php?id=<?php echo $donnees['id_acteur']; ?>">
-					<input class="bouton_suite" type="button" value="Lire la suite" class="bouton">
-				</a>
+				<button class="bouton_suite" onclick= "window.location.href = 'acteur.php?id=<?php echo $donnees['id_acteur']; ?>';"> Lire la suite </button> 
 			</div>	
 		</div>	
 		<?php } //fin de la boucle acteur ?>			

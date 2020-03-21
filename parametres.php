@@ -56,18 +56,18 @@ if (isset($_POST['valider_mdp']))
 	<h3>Modifiez les données de votre compte :</h3>
 	<!-- formulaire toutes données sauf mdp -->
 	<form class="form" method="post" action="parametres.php">
-		<label for="nom">Nom :</label></br>
-		<input class="input" type="text" name="nom"></br>
+		<label for="nom">Nom :</label><br>
+		<input class="input" type="text" name="nom" id="nom"><br>
 		<label for="prenom">Prénom :</label>
-		<input class="input" type="text" name="prenom">
+		<input class="input" type="text" name="prenom" id="prenom">
 		<label  for="question">Question secrète :</label> <br>
-		<select class="input" name="choix">
+		<select class="input" name="choix" id="question">
 			<option value="choix1">Le nom de jeune fille de votre mère</option>
 			<option value="choix2">Le nom de votre premier animal de compagnie</option>
 			<option value="choix3">La ville de naissance de votre père</option>
 		</select> <br>
 		<label for="reponse">Réponse à la question secrète :</label>
-		<input class="input" type="reponse" name="reponse">
+		<input class="input" type="text" name="reponse" id="reponse">
 		<input class="bouton_connexion" type="submit" name="valider" value="Valider">
 	</form>
 	<?php if(isset($erreur)) {echo $erreur;}?>
@@ -77,7 +77,7 @@ if (isset($_POST['valider_mdp']))
 	<!-- formulaire mdp  -->
 	<form class="form" method="post" action="parametres.php">
 	<label for="password">Votre nouveau mot de passe :</label>
-		<input class="input" type="password" name="password">
+		<input class="input" type="password" name="password" id="password">
 		<input class="bouton_connexion" type="submit" name="valider_mdp" value="Valider">
 	</form>
 	<?php 

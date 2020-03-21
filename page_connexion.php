@@ -7,17 +7,17 @@ require_once("include/header_public.php");
 <div id="bloc_page">
 	<div id="login">
 		<h2>Se connecter</h2>
-		<p><div class="form">
+		<div class="form">
 			<form method="post" action="verif_connexion.php">
-				<label for="username"> Pseudo</label> </br>
-				<input class="input" type="pseudo" name="username"> </br>
-				<label for="password"> Mot de passe </label> </br>
-				<input class="input" type="password" name="password"> </br>
-				<a href="mdp_oublie.php"> Mot de passe oublié ? </a></br>
+				<label for="votrepseudo"> Pseudo</label> <br>
+				<input class="input" type="text" name="username" id="votrepseudo"> <br>
+				<label for="votremdp"> Mot de passe </label> <br>
+				<input class="input" type="password" name="password" id="votremdp"> <br>
+				<a href="mdp_oublie.php"> Mot de passe oublié ? </a><br>
 				<input class="bouton_connexion" type="submit" value="Connexion"> <br>
 			</form>
-			</div>
-		</p>
+		</div>
+		
 		
 		<?php 
 		//affiche une erreur si mdp faux
@@ -41,7 +41,7 @@ require_once("include/header_public.php");
 
 		<div class ="nouveaumembre">
 			<p> Nouveau membre ?
-				<a href="page_inscription.php"><button class="bouton_connexion"> Inscription</button> </a>
+				<button class="bouton_connexion" onclick= "window.location.href = 'page_inscription.php';"> Inscription </button> 
 			</p>
 		</div>
 	</div>

@@ -1,4 +1,3 @@
-
 <?php
 // connexion à la bdd
 require("include/connecbdd.php");

@@ -3,7 +3,7 @@ session_start();
 $title = 'Acteur';
 require("include/connecbdd.php");
 require_once("include/header.php");
-require_once('include/footer.php'); 
+
 
 // Présentation acteur 
 $req = $bdd->prepare('SELECT * FROM acteur WHERE id_acteur = ?');
@@ -14,7 +14,7 @@ $donnees = $req->fetch();
 
 <div class="bloc_description">
     <div class="bloc_logoacteur">
-        <img class="logoacteur" src="<?php echo $donnees['logo']; ?>" class="logoacteur"/> <br/>
+        <img class="logoacteur" src="<?php echo $donnees['logo']; ?>" alt="logo_acteur"/> <br/>
     </div>
     <div class="description_acteur">
         <?php 
@@ -39,8 +39,7 @@ $donnees = $req->fetch();
 
         <!--Ajouter un commentaire -->
         <div class="vote_boutons">
-            <a href="commentaire_post.php?id=<?= $_GET['id']?>"> <input type="button" class="bouton_comm" value="Ajoutez un commentaire"> </a> 
-            
+            <button class="bouton_comm" onclick= "window.location.href = 'commentaire_post.php?id=<?= $_GET['id']?>';"> Ajoutez un commentaire </button> 
             <!-- Boutons like et dislike -->
             <form method="post" action="like.php" class="formlike">
                 <input type="hidden" name="id_acteur" id = "id_acteur" value="<?php echo $_GET['id']; ?>" />
@@ -60,10 +59,10 @@ $donnees = $req->fetch();
                 </button>
             </form>
             <form method="post" action="like.php" class="formlike">
-                <input type="hidden" name="id_acteur" id = "id_acteur" value="<?php echo $_GET['id']; ?>" />
+                <input type="hidden" name="id_acteur" id ="id_acteur2" value="<?php echo $_GET['id']; ?>" />
                 <button type="submit" class="vote_bouton" name="vote" value="dislike"> 
                     <img class="iconlike" src="acteurs-partenaires/dislike.jpg" alt="dislike" style="cursor:pointer">
-                </bouton>
+                </button>
             </form>
         </div>
     </div>
@@ -88,4 +87,4 @@ $donnees = $req->fetch();
         $req->closeCursor();?>
     </div>
 </div>
-
+<?php require_once('include/footer.php'); ?>

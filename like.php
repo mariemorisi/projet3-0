@@ -21,6 +21,7 @@ $id_acteur = $_POST['id_acteur'];
 
             $voteexist = $req_vote->rowcount('like');
             if ($voteexist == 0) 
+            //ajouter à la base de données
             { 
                 $add_like = $bdd->prepare('INSERT into vote (id_user, id_acteur, vote) VALUES (:id_user, :id_acteur, 1)');
                 $add_like-> execute(array(

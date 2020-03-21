@@ -51,15 +51,15 @@ if (isset($_POST['submit']))
 <div id="login">
     <form class="form" method="post" action="mdp_oublie.php">
         <label for="username"> Votre pseudo </label> <br>
-        <input class="input" type="pseudo" name="username"> 
+        <input class="input" type="text" name="username" id="username"> 
         <label for="question">Votre question secrète :</label> <br>
-        <select class="input" name="question">
+        <select class="input" name="question" id="question">
             <option value="choix1">Le nom de jeune fille de votre mère</option>
             <option value="choix2">Le nom de votre premier animal de compagnie</option>
             <option value="choix3">La ville de naissance de votre père</option>
         </select> <br>
         <label for="reponse">Réponse à la question secrète :</label>
-        <input class="input" type="reponse" name="reponse">
+        <input class="input" type="text" name="reponse" id="reponse">
         <input class="bouton_connexion" type="submit" value="Valider" name="submit"> <br>
     </form>
     <?php if(isset($erreur)) {echo $erreur;}?>
