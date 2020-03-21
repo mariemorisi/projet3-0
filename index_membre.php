@@ -32,7 +32,8 @@ require_once("include/header.php");
 		<div class="styleacteur">
 			<img class="logo_acteur_mini" src="<?php echo $donnees['logo']; ?>"/> <br/>
 			<div class="texteacteur">
-				<?php echo substr($donnees['description'], 0, 100).'...'; ?>
+				<?php echo '<h2>' . $donnees['acteurs'] . '</h2>';
+				 echo substr($donnees['description'], 0, 100).'...'; ?>
 				<a href="acteur.php?id=<?php echo $donnees['id_acteur']; ?>">
 					<input class="bouton_suite" type="button" value="Lire la suite" class="bouton">
 				</a>

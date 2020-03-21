@@ -12,8 +12,6 @@ header
 {
     
 	padding: 0 1rem;
-    max-height: 100px;
-    justify-content: space-between;
     box-shadow: 0 2px 7px 0 rgba(0,0,0,.12);
       
 }
@@ -235,6 +233,7 @@ font-weight: 250;
     border: rgb(252, 116, 106);
     background-color: rgb(252, 116, 106);
     outline: none;
+    float: right;
 
     
 }
@@ -282,9 +281,6 @@ background-color: rgb(252, 116, 106);
 
 .bouton_deconnexion
 {
-    position: relative;
-    display: flex;
-    align-items: center;
     color: #e44232;
     max-height: 80px;
     text-align: center;
@@ -307,9 +303,6 @@ background-color: rgb(252, 116, 106);
 
 .bouton_parametre
 {
-    position: relative;
-    display: flex;
-    align-items: center;
     color: #616161;
     max-height: 80px;
     text-align: center;
@@ -400,4 +393,48 @@ textarea:focus
     border: 4px solid rgba(253, 140, 140, 0.575);
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+{
+    
+    .logo
+    {
+        width: auto;
+        max-height: 90px;
+        position: absolute;
+        left: 47%;
+    }
+    
+    #nomsession
+    {
+        display: unset;
+    }
+
+    .nomprenom 
+    {
+        text-align: center;
+        padding-top: 37px;
+        position: absolute;
+        top: 70px;
+        left: 43%;
+        padding-right: 5px;
+        margin-top: 10px;
+    }
+
+    .styleacteur 
+    {
+        padding: 8%;
+        margin: 40px;
+        border: dotted 1px rgb(252, 116, 106);
+        border-radius: 10px;
+        display: block;
+        background-color: white;
+    }
+    .logo_acteur_mini 
+    {
+        max-width: 80%;
+        max-height: auto;
+        padding-left: 8%;
+        margin-bottom: 20px;
+    }
+}
 
