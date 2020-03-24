@@ -22,25 +22,26 @@ if(isset($_POST['submit']))
         if ($comm_exist == 0)  
         {
             // si les champs sont remplis 
-            if(!empty($_POST['prenom']) AND !empty($_POST['commentaire'])) 
+            if(!empty($_POST['commentaire'])) 
             {
             //on insere dans la bdd
             $addcomm = $bdd->prepare('INSERT INTO post(id_user, id_acteur, date_add, post) VALUES (:id_user, :id_acteur, NOW(), :post)');
             $addcomm->execute(array(
                 'id_user' => $id_user,
                 'id_acteur' => $id_acteur, 
-                'post' => $post 
-            ));
-            header('location: validation_com.php?ok=comm'); 
+                'post' => $post ));
+                $ok_commentaire = '<p style="color: green;"> Merci pour votre commentaire <?php echo $_SESSION["prenom"]?> !</p> 
+                <p> <a href="index_membre.php"> Retour à l\'accueil </a>'; 
             }
             else
             {
-                $erreur = '<p style="color:  rgb(252, 116, 106);"> Veuillez remplir tous les champs !</p>'; 
+                echo '<p style="color:  rgb(252, 116, 106);"> Veuillez remplir tous les champs !</p>'; 
             }
         }
         else
         {
-            header('location: validation_com.php?err=comm');
+            echo '<p style="color: rgb(252, 116, 106);"> Vous ne pouvez commenter qu\'une seule fois !</p>
+            <p> <a href="index_membre.php"> Retour à l\'accueil </a>';
         }    
     }
 ?>
@@ -57,6 +58,7 @@ if(isset($_POST['submit']))
 
     <?php if(isset($erreur)) {echo $erreur;}?>
     <?php if(isset($ok_commentaire)) {echo $ok_commentaire;}?>
+    <?php if(isset($erreur_once)) {echo $erreur_once;}?>
 </div>
 <?php require_once('include/footer.php');?> 		
 

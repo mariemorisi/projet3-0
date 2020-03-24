@@ -2,7 +2,8 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>Connexion</title>
+		<?php if(!empty($title)){ ?>
+		<title><?= $title; }?></title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
@@ -10,7 +11,7 @@
 			<div id="header2">
 				<a href="page_connexion.php">
 					<img class="logo2" src="acteurs-partenaires/logo-gbaf.png" alt="logo">
-				</a>  
-			</div>  
+				</a>
+			</div>
 		</header>
 		

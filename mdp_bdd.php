@@ -1,10 +1,10 @@
-<?php 
+<?php
+ob_start();
 // connexion à la bdd
 $title = 'Nouveau mot de passe';
 require("include/connecbdd.php");
 require_once("include/header_public.php");
 session_start();
-
 //ne pas afficher la page si la session n'est pas ouverte 
 if (!empty($_SESSION['id_users']))
 {

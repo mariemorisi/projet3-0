@@ -1,4 +1,5 @@
-<?php 
+<?php
+ob_start();
 // connexion à la bdd
 $title = 'Mot de passe oublié';
 require("include/connecbdd.php");
@@ -25,6 +26,7 @@ if (isset($_POST['submit']))
         { 
             $erreur = '<p style="color: rgb(255, 0, 0);"> Données incorrectes !</p>';
         }
+
         else 
         { 
             // renvoyer l'username + reponse vers mdp_bdd 
@@ -38,12 +40,12 @@ if (isset($_POST['submit']))
                 <input type="hidden" name="renvoi_reponse" value="<?php echo $_POST["reponse"]?>">
             </form>
             <?php
-            header('location: mdp_bdd.php');
+            header('Location: mdp_bdd.php');
         }
     }
     else
     {
-        $message = '<p style="color: rgb(255, 0, 0);"> Tous les champs doivent être remplis ! </p>' ; 
+        $champs = '<p style="color: rgb(255, 0, 0);"> Tous les champs doivent être remplis ! </p>' ; 
     }       
 }
 ?>
@@ -63,7 +65,7 @@ if (isset($_POST['submit']))
         <input class="bouton_connexion" type="submit" value="Valider" name="submit"> <br>
     </form>
     <?php if(isset($erreur)) {echo $erreur;}?>
-    <?php if(isset($message)) {echo $message;}?>
+    <?php if(isset($champs)) {echo $champs;}?>
 </div>
 <?php require_once('include/footer.php');?> 
 
