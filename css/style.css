@@ -9,17 +9,14 @@ body
 
 header
 {
-    
 	padding: 0 1rem;
     box-shadow: 0 2px 7px 0 rgba(0,0,0,.12);
-      
 }
 
 h1
 {
     font-size: 3rem;
     text-align: center;
-
 }
 .logo
 {
@@ -47,7 +44,6 @@ footer
 #login, #inscription, #form_commentaire, .bloc_mentions
 {
 	margin: 100px;
-    max-width: 100%; 
     border-radius: 8px;
     border: solid 1px #dbdbdb;
     background: #fafafa;
@@ -56,12 +52,12 @@ footer
 
 #index
 {
-	margin: 100px;
-    max-width: 100%; 
+	margin: 13%;
+    max-width: 100%;
     border-radius: 8px;
     border: solid 1px #dbdbdb;
     background: #fafafa;
-    padding: 25px;
+    padding: 80px;
     text-align: center;
 } 
 
@@ -77,13 +73,18 @@ h3
     justify-content: flex-end;
 }
 
+#banniere_image
+{
+    height: 200px;
+}
 
 #banniere_image img 
 {
-    width: auto;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     margin-top: 30px;
+    object-fit: cover;
 }
 
 .iconlog
@@ -105,7 +106,6 @@ h3
 #acteur
 {
     margin: 100px 30px 100px 30px;
-    max-width: 100%; 
     border-radius: 8px;
     border: solid 1px #dbdbdb;
     background: #fafafa;
@@ -128,7 +128,7 @@ h3
 .logo_acteur_mini
 {
     max-width: 150px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 .bloc_description
 {
@@ -158,33 +158,29 @@ h3
 
 #bloc_titre
 {
-border: white solid 1px;
-margin: 30px 0px 30px 0px;
-padding: 20px;
-text-align: center;
-border-radius: 10px;
-font-size: 1.2rem;
+    margin: 30px 0px 30px 0px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .separateur
 {
     border: solid 7px #e44232;
     border-radius: 10px;
-
 }
 
 .iconlike
 {
     max-width: 65%;
-       
 }
 
 #bloc_commentaire
 {
     border: solid 1px #dbdbdb;
     margin: 80px;
-
 }
+
 .nom_com
 {
     font-weight: bold;
@@ -195,6 +191,7 @@ font-size: 1.2rem;
     border-bottom: solid 1px #dbdbdb;
     padding-bottom: 20px;
 }
+
 .vote
 {
     padding: 20px 50px 10px 50px;
@@ -208,7 +205,6 @@ font-size: 1.2rem;
     margin: 10px 50px 50px 50px;
     padding: 20px;
     background: #fafafa;
-
 }
 
 .vote_bouton
@@ -237,8 +233,6 @@ font-size: 1.2rem;
     background-color: rgb(252, 116, 106);
     outline: none;
     float: right;
-
-    
 }
 
 .bouton_suite:hover
@@ -255,7 +249,6 @@ font-size: 1.2rem;
     max-width: 20%;
     transition: transform 400ms;
     outline: none;
-
 }
 
 .bouton:hover
@@ -285,8 +278,6 @@ background-color: rgb(252, 116, 106);
 .bouton_deconnexion
 {
     color: #e44232;
-    max-height: 80px;
-    text-align: center;
     padding: 20px;
     border: 2px solid transparent;
     transition: .15s cubic-bezier(.2,.8,.2,1);
@@ -306,8 +297,6 @@ background-color: rgb(252, 116, 106);
 .bouton_nom
 {
     color: #616161;
-    max-height: 80px;
-    text-align: center;
     padding: 20px;
     border: 2px solid transparent;
     transition: .15s cubic-bezier(.2,.8,.2,1);
@@ -318,8 +307,6 @@ background-color: rgb(252, 116, 106);
 .bouton_parametre
 {
     color: #616161;
-    max-height: 80px;
-    text-align: center;
     padding: 20px;
     border: 2px solid transparent;
     transition: .15s cubic-bezier(.2,.8,.2,1); 
@@ -357,7 +344,6 @@ background-color: rgb(252, 116, 106);
 .input
 {
     width: 93%;
-    height: 5px;
     margin: 10px;
     border-radius: 8px;
     border: solid 1px #dbdbdb;
@@ -373,10 +359,9 @@ background-color: rgb(252, 116, 106);
 
 }
 
-.form 
+select
 {
-    margin-top: 20px;
-    padding: 0px;
+    height: auto;
 }
 
 .nouveaumembre
@@ -392,7 +377,6 @@ a
     
 textarea
 {
-    resize : none;
     height: 100px;
     border-radius: 1rem;
     border: none;
@@ -409,54 +393,93 @@ textarea:focus
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)
 {
-    body
-    {
-        font-size: 1.8rem;
-    }
+  
     header 
     {
-        padding: 0 1rem;
-        box-shadow: 0 2px 7px 0 rgba(0,0,0,.12);
-        height: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1
+    {
+        font-size: 2rem;
     }
 
     .logo
     {
-        width: auto;
-        max-height: 90px;
-        position: absolute;
-        left: 47%;
+        position: relative;
+        left: 40%;
     }
    
     .bouton_nom
     {
-        color: #616161;
-        max-height: 80px;
-        text-align: center;
-        padding: 20px;
-        border: 2px solid transparent;
-        transition: .15s cubic-bezier(.2,.8,.2,1);
-        background-color: white;
-        outline: none;
         position: relative;
-        top: 80px;
-        right: 80px;
+        left: 10%;
     }
-
+    #acteur
+    {
+     
+        padding: 2px;
+        margin: 2px;;
+    }
     .styleacteur 
     {
         padding: 8%;
-        margin: 40px;
-        border: dotted 1px rgb(252, 116, 106);
-        border-radius: 10px;
         display: block;
-        background-color: white;
     }
-    .logo_acteur_mini 
+    
+    .bouton_suite
     {
-        max-width: 80%;
-        padding-left: 8%;
-        margin-bottom: 20px;
+        float: unset;
     }
+    
+    .bouton_deconnexion, .bouton_parametre
+    {
+        position: relative;
+        left: 10%;
+    }
+
+    #login, #inscription, #form_commentaire, .bloc_mentions 
+    {
+        margin: 5%;
+        border-radius: 8px;
+        border: solid 1px #dbdbdb;
+        background: #fafafa;
+    }
+    .input
+    {
+        
+        padding: 15px;
+        outline: none;
+    }
+    .bloc_description, #bloc_commentaire 
+    {
+        margin: 10px;
+    }
+    .logoacteur 
+    {
+        width: 80%;
+        height: auto;
+    }
+    .bouton_comm 
+    {
+        transform: scale(0.7);
+        position: relative;
+        left: 24px;
+    }
+  
 }
 
+@media only screen and (min-device-width : 480px) and (max-device-width : 768px)
+{
+    .styleacteur
+    {
+    padding: 15px;
+    margin: 15PX;
+    }
+
+    .logo_acteur_mini
+    {
+        max-width: 35%;
+    }
+}
